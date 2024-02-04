@@ -1,1 +1,30 @@
-<p>person works!</p>
+<section class="sec-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-white">
+                <div>
+                    <img [src]="personImg+personInfo.profile_path" alt="person" class="w-100">
+                </div>
+               
+            </div>
+            <div class="col-md-8 text-white">
+                <div>
+                    <h2>{{personInfo.name}}</h2>
+                    <div>
+                    <div>
+                    <p align="justify">{{personInfo.biography.split('\n').slice(0,2).join(" ")}}</p>
+                    <p align="justify">{{personInfo.biography.split('\n').slice(2,4).join(" ")}}</p>
+                    <p align="justify">{{personInfo.biography.split('\n').slice(4,6).join(" ")}}</p>
+                </div>
+                   <div *ngIf="showMore">
+                    <p align="justify">{{personInfo.biography.split('\n').slice(6,8).join(" ")}}</p>
+                    <p align="justify">{{personInfo.biography.split('\n').slice(8,10).join(" ")}}</p>
+                    <p align="justify">{{personInfo.biography.split('\n').slice(10,12).join(" ")}}</p>
+                </div> <a class="main cursor" (click)="showMore=!showMore">{{showMore?'':'see more...'}}</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
