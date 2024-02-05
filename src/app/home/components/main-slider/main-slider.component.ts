@@ -14,8 +14,8 @@ import { NgbCarouselConfig, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 })
 export class MainSliderComponent implements OnInit{
   constructor(private _moviesServics:MoviesService,config: NgbCarouselConfig){
-    config.interval = 10000;
-		config.wrap = false;
+    config.interval = 8000;
+		config.wrap = true
 		config.keyboard = false;
 		config.pauseOnHover = false;}
 

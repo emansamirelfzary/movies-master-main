@@ -14,6 +14,7 @@ export class PersonComponent implements OnInit{
   personImg='http://image.tmdb.org/t/p/w500/'
   imbdUrl:string=''
   showMore:boolean=false
+  maxLinesToShow:number=3
 
   constructor(private _activatedRoute:ActivatedRoute, private _peopleService:PeopleService){}
 
@@ -27,11 +28,25 @@ export class PersonComponent implements OnInit{
 
   this._peopleService.getPeron(this.personId).subscribe({
     next:(response)=>{
-      console.log(response)
       this.personInfo=response
-      this.imbdUrl=`https://www.imdb.com/title/${this.personInfo.imdb_id}/`
+      this.imbdUrl=`https://www.imdb.com/name/${this.personInfo.imdb_id}/`
+      console.log(this.personInfo)
+
     }
   })
   }
 
+
+  getGenderText(gender: number): string {
+    switch (gender) {
+      case 0:
+        return 'Unknown';
+      case 1:
+        return 'Female';
+      case 2:
+        return 'Male';
+      default:
+        return 'Unknown';
+    }
+  }
 }
