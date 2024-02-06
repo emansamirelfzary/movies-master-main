@@ -15,4 +15,8 @@ export class PeopleService {
   getPeron(personId:number):Observable<any>{
     return this._httpClient.get(`${this.baseUrl}${personId}?api_key=${this.apiKey}`)
   }
+
+  getPersonImg(personId:number):Observable<any>{
+    return this._httpClient.get(`${this.baseUrl}${personId}/images?api_key=${this.apiKey}`)
+  }
 }
