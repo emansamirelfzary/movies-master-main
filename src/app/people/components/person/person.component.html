@@ -1,7 +1,7 @@
 <section class="sec-padding person-info">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 text-white">
+            <div class="col-md-3 text-white mb-4 mb-md-0">
                 <div>
                     <img [src]="personImg+personInfo.profile_path" alt="person" class="w-100">
                 </div>
@@ -37,7 +37,7 @@
               <span class="mb-2 d-inline-block opacity-50">Biography
               </span>
 
-      <div>
+      <div class=" fw-lighter">
         <ng-container *ngFor="let line of personInfo.biography.split('\n').slice(0, maxLinesToShow * 2); let i = index;">
           <p align="justify">{{ line }}</p>
         </ng-container>
@@ -51,8 +51,10 @@
         {{ showMore ? '': 'See more...' }}
       </a>
     </div>
+    <app-person-img [personId]="personId"></app-person-img>
+
             </div>
         </div>
-        <app-person-img [personId]="personId"></app-person-img>
+        <app-person-movie-credits [personId]="personId"></app-person-movie-credits>
       </div>
 </section>

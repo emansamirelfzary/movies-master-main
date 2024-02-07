@@ -103,47 +103,54 @@ a {
   max-width: 175px;
 }
 
-.casting  .owl-theme .owl-nav{
+.casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav{
   position: absolute;
    top: 35%;
   transform: translateY(-50%);
   width: 100%;
 }
 
-.casting .owl-carousel .owl-nav .owl-next,.casting  .owl-carousel .owl-nav .owl-prev{
+.casting .owl-carousel .owl-nav .owl-next,.casting  .owl-carousel .owl-nav .owl-prev, .person-images .owl-carousel .owl-nav .owl-next,.person-images  .owl-carousel .owl-nav .owl-prev{
   position: absolute;
 }
 
-.casting .owl-carousel .owl-nav .owl-next{
+.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next{
   right: -25px;
 }
 
-.casting  .owl-carousel .owl-nav .owl-prev{
+.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev{
   left: -25px;
 }
 
-.casting .owl-theme .owl-nav [class*=owl-]{
-  background-color: #303134;
+.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-]{
+  background-color: rgba(48,49,52,.6);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  line-height: 1.5;
+  line-height: 2;
 }
 
-.casting .owl-theme .owl-nav [class*=owl-]:hover{
+.casting .owl-theme .owl-nav [class*=owl-]:hover, .person-images .owl-theme .owl-nav [class*=owl-]:hover{
   color: var(--main-color);
 }
 
-.casting .owl-theme .owl-nav .disabled{
+.casting .owl-theme .owl-nav .disabled, .person-images .owl-theme .owl-nav .disabled{
   color: white;
   display: none;
 }
 
+.person-images .owl-carousel .owl-item{
+  max-width: 200px !important;
+}
 
 /* media */
 @media screen and (max-width:768px) {
+*{
+  font-size: 14px;
+}
+
   .carousel-item .picsum-img-wrapper img{
     transform: translateX(-40%);
 }
@@ -162,17 +169,23 @@ a {
 }
 @media screen and (max-width:600px) {
 
-.casting .owl-theme .owl-nav [class*=owl-]{
-  font-size: 1rem !important;
-  width: 25px !important;
-  height: 25px !important;
+  .casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav{
+    position: static;
+    transform: translateY(0);}
+
+.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-]{
+  font-size: .8rem !important;
+  width: 30px !important;
+  height: 30px !important;
+  position: static;
+
 }
 
-.casting .owl-carousel .owl-nav .owl-next{
+.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next{
   right: -10px;
 }
 
-.casting  .owl-carousel .owl-nav .owl-prev{
+.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev{
   left: -10px;
 }
 }

@@ -1,0 +1,17 @@
+.person-movies{
+  padding-top: 100px;
+}
+
+.person-movies-info img{
+  height:100px
+}
+
+@media screen and (max-width:768px) {
+  .person-movies-info {
+    width: 100% !important;
+  }
+
+  .person-movies-info img{
+    height:auto !important
+  }
+}

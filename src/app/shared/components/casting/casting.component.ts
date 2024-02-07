@@ -38,9 +38,8 @@ export class CastingComponent implements OnInit{
     touchDrag: false,
     pullDrag: false,
     dots: false,
-
     navSpeed: 400,
-    navText: ['<', '>'],
+    navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
     slideBy:7,
     responsive: {
       0: {
