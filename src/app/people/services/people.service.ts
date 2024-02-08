@@ -23,4 +23,7 @@ export class PeopleService {
   getPersonMovies(peronId:number):Observable<any>{
     return this._httpClient.get(`${this.baseUrl}${peronId}/movie_credits?api_key=${this.apiKey}`)
   }
+  getPersonTv(peronId:number):Observable<any>{
+    return this._httpClient.get(`${this.baseUrl}${peronId}/tv_credits?api_key=${this.apiKey}`)
+  }
 }

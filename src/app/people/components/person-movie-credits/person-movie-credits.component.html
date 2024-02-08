@@ -1,6 +1,6 @@
-<section class="person-movies">
+<section class="person-media pb-5">
   <div class="container">
-    <div class="w-75 text-white person-movies-info">
+    <div class="w-75 text-white person-media-info">
       <h3 class="mb-3">Movies</h3>
     <div class=" border-bottom" *ngFor="let movie of personMovies.slice(0,10)|removeNullMovies">
     <a [routerLink]="['/moviedetails',movie.id]">

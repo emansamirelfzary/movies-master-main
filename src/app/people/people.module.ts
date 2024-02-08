@@ -7,6 +7,8 @@ import { PersonImgComponent } from './components/person-img/person-img.component
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PersonMovieCreditsComponent } from './components/person-movie-credits/person-movie-credits.component';
 import { RemoveNullMoviesPipe } from './pipes/remove-null-movies.pipe';
+import { PersonTvCreditsComponent } from './components/person-tv-credits/person-tv-credits.component';
+import { RemoveNullTvPipe } from './pipes/remove-null-tv.pipe';
 
 
 
@@ -15,7 +17,9 @@ import { RemoveNullMoviesPipe } from './pipes/remove-null-movies.pipe';
     PersonComponent,
     PersonImgComponent,
     PersonMovieCreditsComponent,
-    RemoveNullMoviesPipe
+    RemoveNullMoviesPipe,
+    PersonTvCreditsComponent,
+    RemoveNullTvPipe
   ],
   imports: [
     CommonModule,
