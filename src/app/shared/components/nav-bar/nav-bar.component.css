@@ -37,7 +37,9 @@
   background-color: transparent;
 }
 
-
+.nav-link.active{
+  color: var(--main-color) !important;
+}
 .nav-link.active::before {
   content: "";
   position: absolute;

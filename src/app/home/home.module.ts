@@ -5,6 +5,9 @@ import { MainSliderComponent } from './components/main-slider/main-slider.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { homeMoviesComponent } from './components/home-movies/home-movies.component';
+import { HomeTvComponent } from './components/home-tv/home-tv.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BreakingBadComponent } from './components/breaking-bad/breaking-bad.component';
 
 
 
@@ -12,13 +15,16 @@ import { homeMoviesComponent } from './components/home-movies/home-movies.compon
   declarations: [
     HomeComponent,
     MainSliderComponent,
-    homeMoviesComponent
-  
+    homeMoviesComponent,
+    HomeTvComponent,
+    BreakingBadComponent,
+
   ],
   imports: [
     CommonModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ]
 })
 export class HomeModule { }

@@ -103,28 +103,35 @@ a {
   max-width: 175px;
 }
 
-.casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav{
+.casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav, .home-tv .owl-theme .owl-nav{
   position: absolute;
    top: 35%;
   transform: translateY(-50%);
   width: 100%;
 }
 
-.casting .owl-carousel .owl-nav .owl-next,.casting  .owl-carousel .owl-nav .owl-prev, .person-images .owl-carousel .owl-nav .owl-next,.person-images  .owl-carousel .owl-nav .owl-prev{
+.home-tv .owl-theme .owl-nav{
+  top: 50% !important;
+}
+
+.b{
+  background: url(./assets/images/inner-breaking-bad.jpg);
+}
+.casting .owl-carousel .owl-nav .owl-next,.casting  .owl-carousel .owl-nav .owl-prev, .person-images .owl-carousel .owl-nav .owl-next,.person-images  .owl-carousel .owl-nav .owl-prev,.home-tv .owl-carousel .owl-nav .owl-next,.home-tv  .owl-carousel .owl-nav .owl-prev{
   position: absolute;
 }
 
-.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next{
+.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next,.home-tv .owl-carousel .owl-nav .owl-next{
   right: -25px;
 }
 
-.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev{
+.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev,.home-tv  .owl-carousel .owl-nav .owl-prev{
   left: -25px;
 }
 
-.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-]{
-  background-color: rgba(48,49,52,.6);
-  color: white;
+.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-],  .home-tv .owl-theme .owl-nav [class*=owl-]{
+  background-color: #f2f2f3;
+  color: black;
   font-size: 1.2rem;
   width: 45px;
   height: 45px;
@@ -132,11 +139,11 @@ a {
   line-height: 2;
 }
 
-.casting .owl-theme .owl-nav [class*=owl-]:hover, .person-images .owl-theme .owl-nav [class*=owl-]:hover{
+.casting .owl-theme .owl-nav [class*=owl-]:hover, .person-images .owl-theme .owl-nav [class*=owl-]:hover, .home-tv .owl-theme .owl-nav [class*=owl-]:hover{
   color: var(--main-color);
 }
 
-.casting .owl-theme .owl-nav .disabled, .person-images .owl-theme .owl-nav .disabled{
+.casting .owl-theme .owl-nav .disabled, .person-images .owl-theme .owl-nav .disabled, .home-tv .owl-theme .owl-nav .disabled{
   color: white;
   display: none;
 }
@@ -169,23 +176,24 @@ a {
 }
 @media screen and (max-width:600px) {
 
-  .casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav{
+  .casting  .owl-theme .owl-nav, .person-images .owl-theme .owl-nav, .home-tv .owl-theme .owl-nav{
     position: static;
     transform: translateY(0);}
 
-.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-]{
+.casting .owl-theme .owl-nav [class*=owl-], .person-images .owl-theme .owl-nav [class*=owl-], .home-tv .owl-theme .owl-nav [class*=owl-]{
   font-size: .8rem !important;
   width: 30px !important;
   height: 30px !important;
   position: static;
+  line-height: 2.3;
 
 }
 
-.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next{
+.casting .owl-carousel .owl-nav .owl-next, .person-images .owl-carousel .owl-nav .owl-next, .home-tv .owl-carousel .owl-nav .owl-next{
   right: -10px;
 }
 
-.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev{
+.casting  .owl-carousel .owl-nav .owl-prev, .person-images  .owl-carousel .owl-nav .owl-prev, .home-tv  .owl-carousel .owl-nav .owl-prev{
   left: -10px;
 }
 }

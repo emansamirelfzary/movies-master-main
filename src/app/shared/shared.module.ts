@@ -5,6 +5,7 @@ import { RouterModule} from '@angular/router';
 import { CastingComponent } from './components/casting/casting.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RemoveNullPersonPipe } from './pipes/remove-null-person.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -12,7 +13,8 @@ import { RemoveNullPersonPipe } from './pipes/remove-null-person.pipe';
   declarations: [
     NavBarComponent,
     CastingComponent,
-    RemoveNullPersonPipe
+    RemoveNullPersonPipe,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { RemoveNullPersonPipe } from './pipes/remove-null-person.pipe';
   ],
   exports:[
     NavBarComponent,
-    CastingComponent
+    CastingComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

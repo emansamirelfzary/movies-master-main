@@ -14,7 +14,7 @@ export class PersonImgComponent implements OnInit {
   constructor(private _peopleService:PeopleService){}
 
   @Input() personId:number=0
-  
+
   ngOnInit(): void {
     this._peopleService.getPersonImg(this.personId).subscribe({
       next:(response)=>{
@@ -32,7 +32,7 @@ export class PersonImgComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 400,
-    slideBy:6,
+    slideBy:7,
     margin:0,
     navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
     responsive: {
@@ -46,9 +46,9 @@ export class PersonImgComponent implements OnInit {
         items: 4
       },
       940: {
-        items: 8
+        items: 7
       },
-      
+
     },
     nav: true
   }

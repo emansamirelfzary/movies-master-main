@@ -6,7 +6,7 @@
     <a class="btn body-bg main-bg-hover rounded-pill popular-link px-4 text-white py-2" routerLink="/movie/popular">View More</a>
   </div>
   <div class="row mt-1 gy-4 home-movies">
-    <div class="col-lg-4 col-md-6 col-xl-2  cursor" *ngFor="let movie of homeMovies">
+    <div class="col-lg-4  col-xl-2 col-sm-6 cursor" *ngFor="let movie of homeMovies">
       <div class="movie rounded-2">
         <a [routerLink]="['/moviedetails',movie.id]">
         <div class=" overflow-hidden">
