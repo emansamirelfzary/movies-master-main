@@ -6,6 +6,7 @@ import { CastingComponent } from './components/casting/casting.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RemoveNullPersonPipe } from './pipes/remove-null-person.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
   ],
   exports:[
     NavBarComponent,

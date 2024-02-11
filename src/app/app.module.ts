@@ -9,6 +9,7 @@ import { ScrollService } from './shared/services/scroll.service';
 import { TvShowModule } from './tv-show/tv-show.module';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { PeopleModule } from './people/people.module';
+import { SearchModule } from './search/search.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { PeopleModule } from './people/people.module';
     MoviesModule,
     TvShowModule,
     BrowserAnimationsModule,
-    PeopleModule
+    PeopleModule,
+    SearchModule,
 
   ],
   providers: [ScrollService],

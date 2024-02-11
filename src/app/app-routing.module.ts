@@ -8,6 +8,7 @@ import { TrendingMoviesComponent } from './movies/components/trending-movies/tre
 import { TvSeriesDetailsComponent } from './tv-show/components/tv-series-details/tv-series-details.component';
 import { TrendingTvSeriesComponent } from './tv-show/components/trending-tv-series/trending-tv-series.component';
 import { PersonComponent } from './people/components/person/person.component';
+import { SearchResultsComponent } from './search/components/search-results/search-results.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'tv/top_rated',component:TvSeriesComponent},
   {path:'tvsereisdetails/:id', component:TvSeriesDetailsComponent},
   {path:'tv/trending',component:TrendingTvSeriesComponent},
-  {path:'person/:id', component:PersonComponent}
+  {path:'person/:id', component:PersonComponent},
+  {path:'search', component:SearchResultsComponent}
 ];
 
 @NgModule({

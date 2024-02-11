@@ -8,6 +8,7 @@
 
 .tv-series img{
   transition: transform .5s ease;
+  height: 350px;
 }
 
 
@@ -59,4 +60,11 @@ background-color: rgba(0, 0, 0, .3);
 
 .tv-series:hover .title h2{
   margin-bottom: 1.5rem !important;
+}
+
+@media screen and (max-width:1200x) {
+  .series-img img{
+    height:420px !important;
+  }
+  
 }

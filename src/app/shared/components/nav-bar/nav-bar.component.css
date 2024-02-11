@@ -1,9 +1,25 @@
+.offcanvas-start{
+  flex-grow: 0 !important;
+}
+.multi-search input::placeholder{
+  color: #89898a;
+}
+
+.multi-search input:focus{
+  box-shadow: none;
+}
+
+.multi-search input:focus-within,.multi-search input:focus {
+  background-color: transparent !important;
+  border: none;
+}
 
 .menu-icon span{
   width: 35px;
   height: 2px;
   background-color: var(--main-color);
 }
+
 
 .menu-icon span::after, .menu-icon span::before{
   content: '';
