@@ -27,8 +27,8 @@ export class GenresService {
     );
   }
 
-  getGenreMovies(genreId:number):Observable<any>{
-    return this._httpClient.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&with_genres=${genreId}`)
+  getGenreMovies(genreId:number, page:number):Observable<any>{
+    return this._httpClient.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&with_genres=${genreId}&page=${page}`)
   }
  
 }

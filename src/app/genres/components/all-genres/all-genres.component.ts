@@ -15,20 +15,20 @@ import { style, trigger, transition, animate,keyframes } from '@angular/animatio
   animations: [
     trigger('moviesslideAnimation', [
       transition(':enter', [
-        style({ transform: 'translateY(-400%)' }),
-        animate('3000ms', style({ transform: 'translateY(0)' }))
+        style({ transform: 'translateY(-300%)' }),
+        animate('2000ms', style({ transform: 'translateY(0)' }))
       ]),
       transition(':leave', [
-        animate('3000ms', style({ transform: 'translateY(-100%)' }))
+        animate('2000ms', style({ transform: 'translateY(-100%)' }))
       ])
     ]),
     trigger('tvslideAnimation', [
       transition(':enter', [
-        style({ transform: 'translateY(200%)' }),
-        animate('3000ms', style({ transform: 'translateY(0)' }))
+        style({ transform: 'translateY(100%)' }),
+        animate('2000ms', style({ transform: 'translateY(0)' }))
       ]),
       transition(':leave', [
-        animate('3000ms', style({ transform: 'translateY(-100%)' }))
+        animate('2000ms', style({ transform: 'translateY(-100%)' }))
       ])
     ]),
 
@@ -61,14 +61,14 @@ export class AllGenresComponent implements OnInit {
 
       this._movieService.getTrendingMovies(1).subscribe({
         next:(response)=>{
-          this.trendingMovies=response.results.splice(0,5)
+          this.trendingMovies=response.results.splice(0,4)
           console.log(this.trendingMovies)
         }
       })
       
       this._tvService.getTrendingSeries(1).subscribe({
         next:(response)=>{
-          this.trendingTv=response.results.splice(0,5)
+          this.trendingTv=response.results.splice(0,4)
         }
       })
   }
