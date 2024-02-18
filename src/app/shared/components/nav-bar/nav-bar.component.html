@@ -2,7 +2,7 @@
   <div class="container-fluid justify-content-start" [ngClass]="{'border-bottom':!isScrolled}">
     <a class="navbar-brand p-0" href="#" ><img src="./assets/images/logo.png" alt="logo" [ngStyle]="{'height':isScrolled?'60px':'70px'}">
     </a>
-   
+
     <button class="navbar-toggler border-0 py-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <div class="menu-icon">
         <span class="d-block position-relative"></span>
@@ -19,12 +19,12 @@
         <button type="button" class="btn text-white main-hover" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-solid fa-xmark fa-2x"></i>
         </button>
-      </div> 
-      
+      </div>
+
       <div class="offcanvas-body pt-0 text-center">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link position-relative main-hover py-0" aria-current="page" routerLink="home" routerLinkActive="active" [ngStyle]="{'line-height':isScrolled?'55px':'75px'}">Home</a>
+            <a class="nav-link position-relative main-hover py-0 text-white" aria-current="page" routerLink="home" routerLinkActive="active" [ngStyle]="{'line-height':isScrolled?'55px':'75px'}">Home</a>
           </li>
           <li class="nav-item dropdown mx-lg-4">
             <a class="nav-link dropdown-toggle main-hover text-capitalize py-0 text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active" [ngStyle]="{'line-height':isScrolled?'55px':'75px'}">
@@ -47,6 +47,11 @@
             </a>
 
           </li>
+          <li class="nav-item me-md-4">
+            <a class="nav-link position-relative  main-hover py-0 text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false" [ngStyle]="{'line-height':isScrolled?'55px':'75px'}" routerLink="genres" routerLinkActive="active">
+              Categories
+              </a>
+              </li>
         </ul>
       </div>
     </div>

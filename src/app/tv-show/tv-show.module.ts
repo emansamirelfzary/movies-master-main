@@ -24,6 +24,9 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     CarouselModule,
     SharedModule
+  ],
+  exports:[
+    RemoveNullPipe
   ]
 })
 export class TvShowModule { }
