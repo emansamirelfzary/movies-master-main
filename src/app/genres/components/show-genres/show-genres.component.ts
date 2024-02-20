@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Movie } from 'src/app/movies/interface/movie';
+import { TvSeries } from 'src/app/tv-show/interface/tv-series';
 
 @Component({
   selector: 'app-show-genres',
@@ -9,6 +11,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class ShowGenresComponent implements OnInit{
 
   genreId:number=0
+  genreMovies:Movie[]=[]
+  genreTvs:TvSeries[]=[]
 
   constructor(private _activatedRoute:ActivatedRoute){}
 
@@ -19,7 +23,16 @@ export class ShowGenresComponent implements OnInit{
         console.log(this.genreId)
       }
     })
-      
+
+
+
   }
 
+    onGenreMoviesChanged(updatedGenreMovies: Movie[]) {
+      this.genreMovies = updatedGenreMovies;
+      console.log(this.genreMovies)
+    }
+    onGenreTvsChanged(updatedGenreTvs: TvSeries[]) {
+      this.genreTvs = updatedGenreTvs;
+    }
 }

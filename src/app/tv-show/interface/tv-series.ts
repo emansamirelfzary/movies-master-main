@@ -19,4 +19,5 @@ export interface TvSeries {
 
 export interface genres{
   name:string
+  id:number
 }

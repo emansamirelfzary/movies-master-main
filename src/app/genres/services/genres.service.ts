@@ -30,5 +30,8 @@ export class GenresService {
   getGenreMovies(genreId:number, page:number):Observable<any>{
     return this._httpClient.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&with_genres=${genreId}&page=${page}`)
   }
- 
+  getGenreTvs(genreId:number, page:number):Observable<any>{
+    return this._httpClient.get(`${this.baseUrl}/discover/tv?api_key=${this.apiKey}&with_genres=${genreId}&page=${page}`)
+  }
+
 }

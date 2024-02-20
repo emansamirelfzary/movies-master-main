@@ -1,8 +1,8 @@
-
-<div>
+<div class="genre">
+<div *ngIf="genreMovies.length>0; else noFound" >
     <div class="mt-5 px-3">
-        <div class="row mb-4 genre-movie" *ngFor="let genreMovie of genreMovies">
-            
+        <div class="row mb-4 genre-media" *ngFor="let genreMovie of genreMovies">
+
         <div class="col-1 p-0">
             <a [routerLink]="['/moviedetails',genreMovie.id]">
             <img [src]="movieImg+genreMovie.poster_path" alt="poster" class="w-100">
@@ -13,7 +13,7 @@
             <span class="opacity-75">{{genreMovie.release_date}}</span>
             <p class="mt-2 mb-0">{{genreMovie.overview.split(" ").splice(0,23).join(" ")}}</p>
         </div>
-  
+
     </div>
 
     </div>
@@ -21,7 +21,11 @@
     <nav aria-label="Page-nav mt-5">
         <ul class="d-flex pt-5 justify-content-center ps-0">
           <li class="page-item mx-2"  *ngFor="let page of pages">
-            <a class="page-link text-white main-hover cursor" (click)="showGenreMovies(page)" [class.active]="page === currentPage">{{page}}</a></li>
+            <a class="page-link text-white main-hover cursor" (click)="showGenreMovies(page)" [class.active]="page === currentPage" >{{page}}</a></li>
         </ul>
       </nav>
+</div>
+<ng-template #noFound>
+  <p class="text-white pt-5">No movies found.</p>
+</ng-template>
 </div>

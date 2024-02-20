@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { GenresService } from '../../services/genres.service';
 import { Movie } from 'src/app/movies/interface/movie';
 
@@ -17,12 +17,14 @@ export class GenreMoviesComponent implements OnInit{
 
   @Input() genreId:number=0
 
+  @Output() genreMoviesChanged = new EventEmitter<Movie[]>();
+
   constructor(private _genresService:GenresService){}
 
   ngOnInit(): void {
-    
+
     this.showGenreMovies(this.currentPage);
-   
+
   }
 
 
@@ -33,6 +35,8 @@ export class GenreMoviesComponent implements OnInit{
       this.genreMovies = response.results;
       this.pages = Array(this.totalPages).fill(0).map((x, i) => i + 1);
       this.currentPage = page;
+      this.genreMoviesChanged.emit(response.results)
+      console.log(this.genreMoviesChanged)
     }
   });
   }

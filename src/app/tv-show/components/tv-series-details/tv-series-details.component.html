@@ -7,7 +7,7 @@
         <a class="btn main-bg text-uppercase rounded-0 text-white main-bg-hover me-3">movies</a>
         <a class="btn main-bg text-uppercase rounded-0 text-white main-bg-hover">reviews</a>
         <h1 class="mt-3 mb-1">{{tvSeriesDetalis.name}}</h1>
-        <span *ngFor="let gener of tvSeriesDetalis.genres" class="main me-3 genres position-relative">{{gener.name}}</span>
+        <span *ngFor="let gener of tvSeriesDetalis.genres" class=" me-3 genres position-relative"><a [routerLink]="['/showgenres',gener.id]" class="main">{{gener.name}}</a></span>
         <p class="w-75 fs-4 fw-lighter my-3" align="justify">{{tvSeriesDetalis.overview}}</p>
         <div class="row align-items-center gy-4">
           <div class="meta mt-5 col-md-8">
