@@ -48,7 +48,7 @@ export class PersonImgComponent implements OnInit {
       940: {
         items: 7
       },
-
+      
     },
     nav: true
   }
